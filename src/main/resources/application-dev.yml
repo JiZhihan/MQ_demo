@@ -6,6 +6,10 @@ spring:
     username: admin
     password: admin
     virtual-host: entrobus-chain
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirms: true
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
     # 消费手动确认
     listener:
       simple:

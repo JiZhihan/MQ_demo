@@ -17,9 +17,8 @@ public class Consumer {
     @RabbitHandler
     @RabbitListener(queues = "QUEUE_TO_BGY_SUPPLIER_INFO_CHAIN")
     public void process (Message message , Channel channel) throws IOException {
-        System.out.println("[STRING]收到消息:" + new String(message.getBody()));
+        System.out.println("收到消息:" + new String(message.getBody()));
         //false是确认消息已经消费，true为拒绝
         channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
     }
-
 }

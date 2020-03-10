@@ -18,8 +18,6 @@ public class TestMQ {
 
     @Test
     public void test() throws Exception {
-//        p1.sendString();
-//        p1.sendEntity();
+        p1.send("1111111111111");
     }
-
 }
