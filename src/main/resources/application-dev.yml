@@ -1,0 +1,20 @@
+spring:
+  ## rabbitmq
+  rabbitmq:
+    host: 120.77.207.192
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: entrobus-chain
+    # 消费手动确认
+    listener:
+      simple:
+        acknowledge-mode: manual
+
+
+server:
+#  context-path: /chain
+  port: 8111
+
+#config:
+  #dir: /home/data/config
